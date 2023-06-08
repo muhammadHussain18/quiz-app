@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <p id="question"></p>
+    </div>
+<div>
+    <label>
+        <input onclick="on()" type="radio" value="1" name="answer">
+        <span id="option1"></span>
+    </label>
+</div>
+<div>
+    <label>
+        <input onclick="on()" type="radio" value="2" name="answer">
+        <span id="option2"></span>
+    </label>
+</div>
+<div>
+    <label>
+        <input onclick="on()" type="radio" value="3" name="answer">
+        <span id="option3"></span>
+    </label>
+</div>
+
+<button id="btn" disabled  onclick="next()">Next</button>
+    <script src="app.js"></script>
+</body>
+</html>
