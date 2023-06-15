@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="main ">
+    <div class="main-div">
+        
+    <div class="timer">
+            <span id="timer"></span>
+        </div>
+        
     <div>
         <p id="question"></p>
     </div>
@@ -28,9 +35,18 @@
         <input onclick="on()" type="radio" value="3" name="answer">
         <span id="option3"></span>
     </label>
+    
+    <div class="btn">
+        <button id="btn" disabled  onclick="next()"> <span> NEXT
+            </span>
+          </button>
+    </div>
+    
+</div>
+</div>
 </div>
 
-<button id="btn" disabled  onclick="next()">Next</button>
-    <script src="app.js"></script>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

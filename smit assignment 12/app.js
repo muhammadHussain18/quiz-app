@@ -169,8 +169,8 @@ function next(){
                 var select = options[i].value
                 var user = questions[index - 1][`option${select}`]
                 var corrct = questions[index -1].correctOption;
-              if(user === select){
-                score++ 
+              if(user === corrct){
+                score++;
               }
             }
         
@@ -181,8 +181,9 @@ function next(){
 
     if(index > questions.length - 1){
         alert("quiz end")
-        alert(score)
-    }else{
+        alert((score / questions.length) * 100 + "%")
+    }
+    else{
         ques.innerHTML = questions[index].question
         option1.innerText = questions[index].option1
         option2.innerText = questions[index].option2
@@ -201,3 +202,28 @@ function on(){
 
     btn.disabled = false;
 }
+
+
+var min = 1;
+var sec = 59;
+
+var timer = document.getElementById("timer")
+
+
+var interval = setInterval(function(){
+    timer.innerHTML = `${min}:${sec}`
+    sec--
+    if(sec < 1){
+        min--
+        if(min < 1){
+            next(),
+            min = 1
+            sec = 59
+        }else{
+            sec = 59
+        }
+        
+    }
+},1000)
+
+
